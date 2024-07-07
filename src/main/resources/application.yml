@@ -1,0 +1,27 @@
+info:
+  app:
+    name: '@project.name@'
+    version: '@project.version@'
+springdoc:
+  version: '@project.version@'
+  swagger-ui:
+    path: /swagger-ui.html
+server:
+  port: 8080
+  #  tomcat.threads.max: 10
+  servlet:
+    context-path: /api/shorten-uri
+spring:
+  #  threads.virtual.enabled: true
+  profiles.active: dev
+  application.name: shorten-uri
+  jackson:
+    default-property-inclusion: non_null
+    deserialization:
+      fail-on-unknown-properties: true
+      fail-on-ignored-properties: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, beans

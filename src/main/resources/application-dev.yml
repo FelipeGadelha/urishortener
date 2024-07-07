@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://admin:123@localhost:27018
+      database: uri-shortener-db
+      authentication-database: admin
+      auto-index-creation: true
